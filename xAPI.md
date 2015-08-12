@@ -511,27 +511,23 @@ __Verb__: Defines the action being done by the Actor within the Activity within 
 
 ## 8.0 Extending xAPI
 
-xAPI can be extended in a few ways.  The most notable and extensive is Statement Extensions, which allow great flexibility within Statements.  It is recommended that profiles or Communities or Practice agree on how to use  
+xAPI can be extended in a few ways. The most notable is Statement Extensions, which allow great flexibility within Statements.  It is recommended that profiles or Communities or Practice agree on how to use  
 extensions for their particular use cases. Implementation details are covered in a [later section](#miscext)
 
-The About Resource is another place xAPI supports Extensions.  The LRS may find it useful to communicate features or behaviors beyond this specification to activity provider.  It is hoped that if more information is available about an LRS, that the About Resource contains it.
+The About Resource is another place xAPI supports Extensions.  The LRS may find it useful to communicate features or behaviors beyond this specification to activity provider. The LRS can use extensions to the About Resource to communicate these features and behaviours.
 
 Finally, the set of Resources implemented is not expected to be constrained by this document. Resources beyond 
-those listed in this specification can be implemented and co-exist with current Resources.
+those listed in this specification can be implemented and co-exist with the Resources defined in this specification.
 
 <a name="COPs" />
 
 ## 9.0 Profiles and Communities of Practice
 
-xAPI focuses on the structure of communication between a client and an LRS.  It spares many details of the content 
-to increase flexibility.  The intention in keeping the specification somewhat loose is that Communities of  
-Practice (CoP) can define content (verbs, activity types, contextual relationships, extensions, etc.) for their use cases.  It is very important that such communities exist and share best practices.
+xAPI strictly defines the structure of statements communicated between the client and an LRS but is very flexible as to the content of that statement structure. For example, the specification requires that all statements have a verb property, but does not restrict the values of that property; any verb can be used. This flexibility enables Tin Can to be used in any context, including future use cases not envisaged by the specification authors.
 
-A profile of xAPI is a set of rules and/or vocabularies applied to a valid xAPI implementation.  Often, a CoP leverages many best practices to create a profile.
-
-A profile will typically describe in greater detail some of the open-ended areas of the specification, such as 
-verbs, activity types, attachment usage, extensions, structure and domains for IRIs, and keys/possible values 
-within xAPI Resources like the State API.  This is referred to as creating a vocabulary.
+It is intended that Communities of Practice (CoPs) will define the identifiers (verbs, activity types, contextual relationships, extensions, etc.) to be used in their use 
+cases. It is very important that such communities exist and share best practices. The CoP will define these identifiers in a profile. This is a set of rules and/or 
+vocabularies to implemented in addition to xAPI for the particular use case being addressed.
 
 It is recommended that a profile use a unique "category" within a Statement's context to refer to any Statement  
 which follows the profile.  An example profile is [cmi5](https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_runtime.md#ContextActivities"), which is designed for the traditional single learner, single online learning use case.
